@@ -35,7 +35,10 @@ CompilerSet makeprg=nant\ -find\ -nologo
 "%C\ %#[%.%#]\ %#%m
 " ,%-C%.%#
 
-CompilerSet errorformat=\ %#[%.%#]\ %f(%l\\,%c):\ %t%*[^\ ]\ %[A-Z]%#%n:\ %m,%>\ %#[%.%#]\ %f(%l\\,%c):\ %m
+CompilerSet errorformat=
+            \%A\ %#[%.%#]\ %f(%l\\,%c):\ %t%[a-z]%#\ %[A-Z]%#%n:\ %m,
+            \%A\ %#[%.%#]\ %f(%l):\ %t%[a-z]%#\ %[A-Z]%#%n:\ %m,
+            \%-A\ %#%.%#
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
